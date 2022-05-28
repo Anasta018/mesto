@@ -198,3 +198,60 @@
     line-height: 22px;
     color: #545454;
 }
+
+.popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+}
+
+.popup__container {
+    width: 90%;
+    max-width: 430px;
+    min-height: 330px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.popup__close-btn {
+    background-image: url(./images/Close_Icon.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    background-position: center;
+    transition: opacity .6s ease;
+    cursor: pointer;
+}
+
+.popup__close-btn:hover {
+    opacity: 60%;
+}
+
+.popup__title {
+    margin: 34px 64px 0 36px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.popup__fieldset {
+    border: none;
+    
+}
