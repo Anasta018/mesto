@@ -184,3 +184,17 @@
 .elements__btn-like:hover {
     opacity: 50%;
 }
+
+.footer {
+    max-width: 880px;
+    margin: 0 auto 60px;
+}
+
+.footer__copyright {
+    max-width: 318px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #545454;
+}
