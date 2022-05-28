@@ -1,0 +1,121 @@
+.page {
+    max-width: 1280px;
+    min-width: 320px;
+    background-color: #000000;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Inter', Arial, sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+}
+
+.header {
+    max-width: 880px;
+    margin: 45px auto 0;
+    border-bottom: 1px solid #545454;
+}
+
+.header__logo {
+    max-width: 142px;
+    padding: 0 0 41px 0;
+}
+
+.profile{
+    max-width: 880px;
+    margin: 40px auto 51px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile__avatar {
+    width: 120px;
+    border-radius: 50%;
+}
+
+.profile__info {
+    padding: 0 0 0 30px;
+    max-width: 336px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.profile__user-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.profile__name {
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+    color: #FFFFFF;
+    max-width: 294px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.profile__edit-btn {
+    padding: 0;
+    background-image: url(./images/Edit_Button.svg);
+    background-repeat: no-repeat;
+    border: 1px solid #FFFFFF;
+    background-color: #000000;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: opacity .6s ease;
+    box-sizing: border-box;
+}
+
+.profile__edit-btn:hover {
+    opacity: .6;
+}
+
+.prolife__about-user {
+    margin: 0;
+    padding: 16px 0 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    max-width: 336px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.profile__add-btn {
+    padding: 0;
+    background-image: url(./images/Vector.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    width: 150px;
+    height: 50px;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+    box-sizing: border-box;
+    transition: opacity .6s ease;
+    cursor: pointer;
+}
+
+.profile__add-btn:hover {
+    opacity: .6;
+}

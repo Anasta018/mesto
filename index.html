@@ -10,19 +10,23 @@
   <link rel="stylesheet" href="./pages/index.css">
   <title>Место</title>
 </head>
-<body>
+<body class="page">
 <header class="header">
-  <img src="./images/logo.svg" alt="Лого">
+  <img class="header__logo" src="./images/logo-1.svg" alt="Лого">
 </header>
 <main>
   <section class="profile">
-    <img class="profile__avatar" src="./images/kusto.jpg" alt="Кусто">
-    <div class="profile__info">
-      <h1 class="profile__name">Жак-Ив Кусто</h1>
-      <button class="profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
+    <div class="profile__inner">
+      <img class="profile__avatar" src="./images/kusto.jpg" alt="Кусто">
+      <div class="profile__info">
+        <div class="profile__user-info">
+          <h1 class="profile__name">Жак-Ив Кусто</h1>
+          <button class="profile__edit-btn" type="button" aria-label="Редактировать профиль"></button>
+        </div>
+        <p class="prolife__about-user">Исследователь океана</p>
+      </div>
     </div>
-    <p class="prolife__about-user">Исследователь океана</p>
-    <button class="profile__add-button" type="button" aria-label="Добавить"></button>
+    <button class="profile__add-btn" type="button" aria-label="Добавить"></button>
   </section>
   <section class="elements">
     <ul class="elements__list">
