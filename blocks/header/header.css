@@ -2,4 +2,16 @@
     max-width: 880px;
     margin: 45px auto 0;
     border-bottom: 1px solid #545454;
+    transition: opacity .3s ease;
+}
+
+.header:hover {
+    opacity: 70px;
+}
+
+@media screen and (max-width: 1023px) {
+    .header {
+        max-width: 320px;
+        margin: 28px auto 0;
+    }
 }
