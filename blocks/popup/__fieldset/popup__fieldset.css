@@ -4,3 +4,9 @@
     padding: 54px 36px 48px;
     max-width: 358px;
 }
+
+@media screen and (max-width: 1023px) {
+    .popup__fieldset {
+        padding: 75px 22px 45px;
+    }
+}
