@@ -185,6 +185,11 @@
     opacity: 50%;
 }
 
+.elements__btn-like:active {
+    fill: #000000;;
+}
+
+
 .footer {
     max-width: 880px;
     margin: 0 auto 60px;
@@ -214,7 +219,6 @@
 .popup__container {
     width: 90%;
     max-width: 430px;
-    /*min-height: 330px;*/
     background: #FFFFFF;
     border-radius: 10px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
@@ -289,8 +293,13 @@
     border-radius: 2px;
     cursor: pointer;
     transition: opacity .8s ease;
+    box-sizing: border-box;
 }
 
 .popup__btn-save:hover {
     opacity: 80%;
+}
+
+.popup_hidden_form {
+    display: none;
 }
