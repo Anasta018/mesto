@@ -4,14 +4,22 @@ const button = document.querySelector('.profile__edit-btn');
 const popup = document.querySelector('.popup');
 const popupCloseButton = document.querySelector('.popup__close-btn');
 
+function closePopupOnQ(e) {
+    if (e.code === 'KeyQ') {
+        closePopup();
+    }
+}
+
 function openPopup() {
     popup.classList.remove('popup_hidden_form');
-
+    document.addEventListener('keypress', closePopupOnQ);
+    inputName.value = document.querySelector('.profile__name').textContent;
+    inputAbout.value = document.querySelector('.prolife__about-user').textContent;
 }
 
 function closePopup() {
     popup.classList.add('popup_hidden_form');
-    /*document.removeEventListener('keypress', closePopupOnQ);*/
+    document.removeEventListener('keypress', closePopupOnQ);
 }
 
 button.addEventListener('click', function() {
@@ -24,12 +32,25 @@ popupCloseButton.addEventListener('click', function() {
 
 popup.addEventListener('click', function(e) {
     if (e.target === e.currentTarget) {
-        
+        closePopup();
     }
 });
 
-document.addEventListener('keypress', function(e) {
-    if (e.code === 'KeyQ') {
-        closePopup();
-    }
-})
+// редактирование профиля
+
+// Находим форму в DOM
+let popupContainer = document.querySelector('.popup__container');
+// Находим поля формы в DOM
+let inputName = document.querySelector('.popup__input_name');
+let inputAbout = document.querySelector('.popup__input_about');
+let nameUser = document.querySelector('.profile__name');
+let aboutUser = document.querySelector('.prolife__about-user');
+// Обработчик «отправки» формы
+function formSubmitHandler (evt) {
+    evt.preventDefault();
+    nameUser.textContent = inputName.value;
+    aboutUser.textContent = inputAbout.value;
+    closePopup();
+}
+// Прикрепляем обработчик к форме:
+popupContainer.addEventListener('submit', formSubmitHandler);
