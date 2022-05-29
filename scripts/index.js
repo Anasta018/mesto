@@ -1,6 +1,6 @@
 //открытие и закрытие формы редактирования профиля
 
-const button = document.querySelector('.profile__edit-btn');
+const editButton = document.querySelector('.profile__edit-btn');
 const popup = document.querySelector('.popup');
 const popupCloseButton = document.querySelector('.popup__close-btn');
 
@@ -14,7 +14,7 @@ function openPopup() {
     popup.classList.remove('popup_hidden_form');
     document.addEventListener('keypress', closePopupOnQ);
     inputName.value = document.querySelector('.profile__name').textContent;
-    inputAbout.value = document.querySelector('.prolife__about-user').textContent;
+    inputAbout.value = document.querySelector('.profile__about-user').textContent;
 }
 
 function closePopup() {
@@ -22,7 +22,7 @@ function closePopup() {
     document.removeEventListener('keypress', closePopupOnQ);
 }
 
-button.addEventListener('click', function() {
+editButton.addEventListener('click', function() {
     openPopup();
 });
 
