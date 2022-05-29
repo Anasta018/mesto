@@ -1,4 +1,4 @@
-.prolife__about-user {
+.profile__about-user {
     margin: 0;
     padding: 16px 0 0;
     font-style: normal;
@@ -13,7 +13,7 @@
 }
 
 @media screen and (max-width: 1023px) {
-    .prolife__about-user {
+    .profile__about-user {
         font-size: 14px;
         line-height: 17px;
         text-align: center;
