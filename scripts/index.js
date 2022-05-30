@@ -4,6 +4,17 @@ const editButton = document.querySelector('.profile__edit-btn');
 const popup = document.querySelector('.popup');
 const popupCloseButton = document.querySelector('.popup__close-btn');
 
+// редактирование профиля
+
+// Находим форму в DOM
+let popupContainer = document.querySelector('.popup__container');
+// Находим поля формы в DOM
+let inputName = document.querySelector('.popup__input_name');
+let inputAbout = document.querySelector('.popup__input_about');
+let nameUser = document.querySelector('.profile__name');
+let aboutUser = document.querySelector('.profile__about-user');
+
+//открытие и закрытие формы редактирования профиля
 function closePopupOnQ(e) {
     if (e.code === 'KeyQ') {
         closePopup();
@@ -37,14 +48,6 @@ popup.addEventListener('click', function(e) {
 });
 
 // редактирование профиля
-
-// Находим форму в DOM
-let popupContainer = document.querySelector('.popup__container');
-// Находим поля формы в DOM
-let inputName = document.querySelector('.popup__input_name');
-let inputAbout = document.querySelector('.popup__input_about');
-let nameUser = document.querySelector('.profile__name');
-let aboutUser = document.querySelector('.profile__about-user');
 // Обработчик «отправки» формы
 function formSubmitHandler (evt) {
     evt.preventDefault();
