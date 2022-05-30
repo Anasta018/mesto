@@ -44,7 +44,7 @@ let popupContainer = document.querySelector('.popup__container');
 let inputName = document.querySelector('.popup__input_name');
 let inputAbout = document.querySelector('.popup__input_about');
 let nameUser = document.querySelector('.profile__name');
-let aboutUser = document.querySelector('.prolife__about-user');
+let aboutUser = document.querySelector('.profile__about-user');
 // Обработчик «отправки» формы
 function formSubmitHandler (evt) {
     evt.preventDefault();

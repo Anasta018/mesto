@@ -6,7 +6,7 @@
     flex-wrap: wrap;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     .profile__info {
         padding: 0;
         margin: 22.25px auto 36px;

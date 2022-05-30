@@ -20,7 +20,7 @@
     opacity: 80%;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 767px) {
     .popup__btn-save {
         width: 238px;
         height: 46px;

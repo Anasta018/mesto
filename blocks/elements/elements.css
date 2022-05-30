@@ -5,6 +5,13 @@
 
 @media screen and (max-width: 1023px) {
     .elements {
+        max-width: 80%;
+        margin-bottom: 48px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .elements {
         max-width: 282px;
         margin-bottom: 48px;
     }
