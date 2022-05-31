@@ -9,8 +9,8 @@ const popupCloseButton = document.querySelector('.popup__close-btn');
 // Находим форму в DOM
 let popupContainer = document.querySelector('.popup__container');
 // Находим поля формы в DOM
-let inputName = document.querySelector('.popup__input_name');
-let inputAbout = document.querySelector('.popup__input_about');
+let inputName = document.querySelector('.popup__input_type_name');
+let inputAbout = document.querySelector('.popup__input_type_about');
 let nameUser = document.querySelector('.profile__name');
 let aboutUser = document.querySelector('.profile__about-user');
 
