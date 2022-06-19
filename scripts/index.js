@@ -7,14 +7,26 @@ const popupCloseButton = document.querySelector('.popup__close-btn');
 // редактирование профиля
 
 // Находим форму в DOM
-let popupContainer = document.querySelector('.popup__container');
+const popupContainer = document.querySelector('.popup__container_edit_form');
+
+const cardForm = document.querySelector('.popup__container_add_form');
 // Находим поля формы в DOM
-let inputName = document.querySelector('.popup__input_type_name');
-let inputAbout = document.querySelector('.popup__input_type_about');
-let nameUser = document.querySelector('.profile__name');
-let aboutUser = document.querySelector('.profile__about-user');
+const inputName = document.querySelector('.popup__input_type_name');
+const inputAbout = document.querySelector('.popup__input_type_about');
+const nameUser = document.querySelector('.profile__name');
+const aboutUser = document.querySelector('.profile__about-user');
+const inputPlaceName = document.querySelector('.popup__input_type_place-name');
+const inputLink = document.querySelector('.popup__input_type_link');
+const addButton = document.querySelector('.profile__add-btn');
+
+/*const popupAdd = document.querySelector('.popup_add-cards_form'); // попап окно для добавления карточки*/
+const popupFormAdd = document.querySelector('.popup__form_add-cards'); // form добавления карточки
+
 
 //карточки
+
+const elements = document.querySelector('.elements');
+const cardsTemplate = document.querySelector('#cards_template').content;
 const initialCards = [
     {
       name: 'Китайская опера',
@@ -65,14 +77,6 @@ function closePopup() {
 editButton.addEventListener('click', openPopup);
 popupCloseButton.addEventListener('click', closePopup);
 
-/*editButton.addEventListener('click', function() {
-    openPopup();
-});
-
-popupCloseButton.addEventListener('click', function() {
-    closePopup();
-});*/
-
 popup.addEventListener('click', function(e) {
     if (e.target === e.currentTarget) {
         closePopup();
@@ -91,10 +95,6 @@ function formSubmitHandler (evt) {
 popupContainer.addEventListener('submit', formSubmitHandler);
 
 
-
-const elements = document.querySelector('.elements');
-const cardsTemplate = document.querySelector('#cards_template').content;
-
 function createCard(item) {
     const cards = cardsTemplate.querySelector('.cards').cloneNode(true);
     /*const btnLike = cards.querySelector('.cards__btn-like');
@@ -106,7 +106,7 @@ function createCard(item) {
     cardsCaption.textContent = item.name;
     /*btnLike.addEventListener('click', activateLike);
     btnDelete.addEventListener('click', deleteCard);*/
-    cardsPhoto.addEventListener('click', ()=>{openPreviewImage(item)});
+    /*cardsPhoto.addEventListener('click', ()=>{openPreviewImage(item)});*/
     return cards;
   };
 
@@ -114,3 +114,9 @@ function createCard(item) {
       const renderCards = createCard(item);
       elements.prepend(renderCards);
   });
+
+  function openPopupFormAdd () {
+    openPopup();
+  }
+
+  addButton.addEventListener('click', openPopupFormAdd);
