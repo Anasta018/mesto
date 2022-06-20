@@ -142,3 +142,13 @@ function createCard(item) {
 }
 
 popupAddForm.addEventListener('submit', formAddHandler);
+
+
+/*function closePopup(evt) {
+  const popup = evt.target.closest('.popup');
+  popup.classList.remove('popup_opened');
+}
+
+popupCloseButton.forEach(button => {
+  button.addEventListener('click', closePopup);
+})*/
