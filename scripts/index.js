@@ -7,21 +7,24 @@ const popupCloseButton = document.querySelector('.popup__close-btn');
 // редактирование профиля
 
 // Находим форму в DOM
-const popupContainer = document.querySelector('.popup__container_edit_form');
+const popupContainer = document.querySelector('.popup_type_edit-form');
+const popupAddForm = document.querySelector('.popup_type_add-form');
 
-const cardForm = document.querySelector('.popup__container_add_form');
 // Находим поля формы в DOM
+const formEdit = document.querySelector('.popup__form_type_edit');
+const formAdd = document.querySelector('.popup__form_type_add');
+
 const inputName = document.querySelector('.popup__input_type_name');
 const inputAbout = document.querySelector('.popup__input_type_about');
 const nameUser = document.querySelector('.profile__name');
 const aboutUser = document.querySelector('.profile__about-user');
+
 const inputPlaceName = document.querySelector('.popup__input_type_place-name');
 const inputLink = document.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__add-btn');
+const popupFormAdd = document.querySelector('.popup__form_type_add');
 
-/*const popupAdd = document.querySelector('.popup_add-cards_form'); // попап окно для добавления карточки*/
-const popupFormAdd = document.querySelector('.popup__form_add-cards'); // form добавления карточки
-
+const btnCloseAdd = document.querySelector('.popup__close-btn_type_add');
 
 //карточки
 
@@ -63,14 +66,14 @@ const initialCards = [
 }*/
 
 function openPopup() {
-    popup.classList.remove('popup_hidden_form');
+    popup.classList.add('popup_opened');
     /*document.addEventListener('keypress', closePopupOnQ);*/
     inputName.value = nameUser.textContent;
     inputAbout.value = aboutUser.textContent;
 }
 
 function closePopup() {
-    popup.classList.add('popup_hidden_form');
+    popup.classList.remove('popup_opened');
     /*document.removeEventListener('keypress', closePopupOnQ);*/
 }
 
@@ -115,8 +118,27 @@ function createCard(item) {
       elements.prepend(renderCards);
   });
 
-  function openPopupFormAdd () {
-    openPopup();
+  function openPopupAddForm() {
+    popupAddForm.classList.add('popup_opened');
   }
 
-  addButton.addEventListener('click', openPopupFormAdd);
+  function closePopupAddForm() {
+    popupAddForm.classList.remove('popup_opened');
+  }
+
+  addButton.addEventListener('click', openPopupAddForm);
+  btnCloseAdd.addEventListener('click', closePopupAddForm);
+
+  function formAddHandler (evt) {
+    evt.preventDefault();
+    const inputAdd ={
+      place: inputPlaceName.value,
+      link: inputLink.value
+    }
+    const card = createCard(inputAdd);
+    elements.prepend(card);
+    evt.target.reset();
+    closePopup();
+}
+
+popupAddForm.addEventListener('submit', formAddHandler);

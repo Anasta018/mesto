@@ -31,60 +31,16 @@
     <button class="profile__add-btn" type="button" aria-label="Добавить"></button>
   </section>
   <section class="elements">
-    <ul class="elements__list">
-     <!-- <li class="elements__item">
-        <img class="elements__photo" src="./images/china_opera.jpg" alt="Китайская опера">
-        <div class="elements__caption-container">
-          <h2 class="elements__caption">Китайская опера</h2>
-          <button class="elements__btn-like" type="button" aria-label="Лайк"></button>
-        </div>
-      </li>
-      <li class="elements__item">
-        <img class="elements__photo" src="./images/Коулун.jpeg" alt="Гонг Конг">
-        <div class="elements__caption-container">
-          <h2 class="elements__caption">Коулун, Гонг Конг</h2>
-          <button class="elements__btn-like" type="button" aria-label="Лайк"></button>
-        </div>
-      </li>
-      <li class="elements__item">
-        <img class="elements__photo" src="./images/kyoto.jpg" alt="Киото">
-        <div class="elements__caption-container">
-          <h2 class="elements__caption">Киото, Япония</h2>
-          <button class="elements__btn-like" type="button" aria-label="Лайк"></button>
-        </div>
-      </li>
-      <li class="elements__item">
-        <img class="elements__photo" src="./images/Синдзюку.jpeg" alt="Синдзюку">
-        <div class="elements__caption-container">
-          <h2 class="elements__caption">Синдзюку, Токио, Япония</h2>
-          <button class="elements__btn-like" type="button" aria-label="Лайк"></button>
-        </div>
-      </li>
-      <li class="elements__item">
-        <img class="elements__photo" src="./images/Каппадокия.jpeg" alt="Каппадокия">
-        <div class="elements__caption-container">
-          <h2 class="elements__caption">Каппадокия, Турция</h2>
-          <button class="elements__btn-like" type="button" aria-label="Лайк"></button>
-        </div>
-      </li>
-      <li class="elements__item">
-        <img class="elements__photo" src="./images/пагода.jpeg" alt="Пагода">
-        <div class="elements__caption-container">
-          <h2 class="elements__caption">Пагода</h2>
-          <button class="elements__btn-like" type="button" aria-label="Лайк"></button>
-        </div>
-      </li>-->
-    </ul>
   </section>
 </main>
 <footer class="footer">
   <p class="footer__copyright">&copy; 2022 Mesto Russia</p>
 </footer>
-<div class="popup popup_hidden_form">
-  <div class="popup__container popup__container_edit_form">
+<div class="popup popup_type_edit-form">
+  <div class="popup__container">
     <button class="popup__close-btn" type="button" aria-label="Закрыть"></button>
     <h2 class="popup__title">Редактировать профиль</h2>
-    <form class="popup__form" name="formEdit">
+    <form class="popup__form popup__form_type_edit" name="formEdit">
       <fieldset class="popup__fieldset">
         <input class="popup__input popup__input_type_name" type="text" placeholder="Имя пользователя" name="name">
         <input class="popup__input popup__input_type_about" type="text" placeholder="О себе" name="about">
@@ -94,16 +50,16 @@
   </div>
 </div>
 
-<div class="popup popup_hidden_form">
-  <div class="popup__container popup__container_add_form">
-    <button class="popup__close-btn" type="button" aria-label="Закрыть"></button>
+<div class="popup popup_type_add-form">
+  <div class="popup__container ">
+    <button class="popup__close-btn popup__close-btn_type_add" type="button" aria-label="Закрыть"></button>
     <h2 class="popup__title">Новое место</h2>
-    <form class="popup__form popup__form_add-cards" name="formAdd">
+    <form class="popup__form popup__form_type_add" name="formAdd">
       <fieldset class="popup__fieldset">
         <input class="popup__input popup__input_type_place-name" type="text" placeholder="Название места" name="name">
         <input class="popup__input popup__input_type_link" type="url" placeholder="Ссылка на картинку" name="link">
       </fieldset>
-      <button class="popup__btn-add" type="submit" aria-label="Создать">Создать</button>
+      <button class="popup__btn-save" type="submit" aria-label="Создать">Создать</button>
     </form>
   </div>
 </div>
