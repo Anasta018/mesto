@@ -138,7 +138,7 @@ function createCard(item) {
     const card = createCard(inputAdd);
     elements.prepend(card);
     evt.target.reset();
-    closePopup();
+    closePopup(popupAddForm);
 }
 
 popupAddForm.addEventListener('submit', formAddHandler);
