@@ -49,9 +49,8 @@
     </form>
   </div>
 </div>
-
 <div class="popup popup_type_add-form">
-  <div class="popup__container ">
+  <div class="popup__container">
     <button class="popup__close-btn popup__close-btn_type_add" type="button" aria-label="Закрыть"></button>
     <h2 class="popup__title">Новое место</h2>
     <form class="popup__form popup__form_type_add" name="formAdd">
@@ -64,6 +63,13 @@
   </div>
 </div>
 
+<div class="popup popup_type_photo-open">
+  <figure class="popup__container_photo">
+    <button class="popup__close-btn popup__close-btn_type_photo" type="button" aria-label="Закрыть"></button>
+    <img class="popup__photo-open" src="#" alt="Фото">
+    <figcaption class="popup__figcaption"></figcaption>
+  </figure>
+</div>
 
 <template id="cards_template">
   <li class="cards">
@@ -75,7 +81,6 @@
     </div>
   </li>
 </template>
- 
 <script src="./scripts/index.js"></script>
 </body>
 </html>
