@@ -92,7 +92,7 @@ function formSubmitHandler (evt) {
     evt.preventDefault();
     nameUser.textContent = inputName.value;
     aboutUser.textContent = inputAbout.value;
-    closePopup();
+    closePopup(evt);
 }
 // Прикрепляем обработчик к форме:
 popupContainer.addEventListener('submit', formSubmitHandler);
@@ -131,24 +131,24 @@ function createCard(item) {
 
   function formAddHandler (evt) {
     evt.preventDefault();
-    const inputAdd ={
+    const item ={
       place: inputPlaceName.value,
       link: inputLink.value
     }
-    const card = createCard(inputAdd);
+    const card = createCard(item);
     elements.prepend(card);
     evt.target.reset();
-    closePopup(popupAddForm);
+    closePopup(evt);
 }
 
 popupAddForm.addEventListener('submit', formAddHandler);
 
 
-/*function closePopup(evt) {
+function closePopup(evt) {
   const popup = evt.target.closest('.popup');
   popup.classList.remove('popup_opened');
-}
+};
 
 popupCloseButton.forEach(button => {
   button.addEventListener('click', closePopup);
-})*/
+});

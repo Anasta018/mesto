@@ -35,3 +35,5 @@
 @import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__close-btn/popup__close-btn.css);
 @import url(../blocks/popup/__btn-save/popup__btn-save.css);
+
+@import url(../blocks/cards/cards.css);
