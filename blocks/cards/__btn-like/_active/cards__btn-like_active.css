@@ -1,0 +1,8 @@
+.cards__btn-like_active {
+    background-image: url(../../images/like_active.svg);
+    transition: opacity .2s ease;
+}
+
+.cards__btn-like_active:hover {
+    opacity: 50%;
+}

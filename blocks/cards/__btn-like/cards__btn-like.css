@@ -1,4 +1,4 @@
-.elements__btn-like {
+.cards__btn-like {
     background: url(../../../images/like.svg) no-repeat transparent;
     width: 22px;
     height: 19px;
@@ -8,10 +8,10 @@
     cursor: pointer;
 }
 
-.elements__btn-like:hover {
+.cards__btn-like:hover {
     opacity: 50%;
 }
 
-.elements__btn-like:active {
+.cards__btn-like:active {
     fill: #000000;
 }
