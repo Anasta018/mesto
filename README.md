@@ -8,7 +8,7 @@
 * [Ссылка на макет  5 спринта в Figma](https://www.figma.com/file/bjyvbKKJN2naO0ucURl2Z0/JavaScript.-Sprint-5?node-id=50160%3A172)
 
 ## **Github pages**
-[https://anasta018.github.io/mesto/](https://anasta018.github.io/mesto/)
+https://anasta018.github.io/mesto/
 
 ## **Технологии и инструменты**
 * HTML5;
