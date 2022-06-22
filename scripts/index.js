@@ -70,7 +70,7 @@ const initialCards = [
     }
 }*/
 
-function openPopup() {
+function openPopup(popup) {
   popup.classList.add('popup_opened');
     /*document.addEventListener('keypress', closePopupOnQ);*/
     inputName.value = nameUser.textContent;
