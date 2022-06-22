@@ -24,8 +24,6 @@ const inputLink = document.querySelector('.popup__input_type_link');
 const addButton = document.querySelector('.profile__add-btn');
 const popupFormAdd = document.querySelector('.popup__form_type_add');
 
-/*const btnCloseAdd = document.querySelector('.popup__close-btn_type_add');*/
-
 const openPhoto = document.querySelector('.popup__photo-open');
 const figcaption = document.querySelector('.popup__figcaption');
 const clsBtnPhoto = document.querySelector('.popup__close-btn_type_photo');
