@@ -108,30 +108,30 @@ function createCard(item) {
     openPhoto.src = item.link;
     figcaption.textContent = item.name;
     openPopup(popupPhotoOpen);
-  }
+  };
 
   initialCards.forEach(function (item) {
       const rCards = createCard(item);
       elements.prepend(rCards);
-  })
+  });
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
-}
+};
 
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
-}
+};
 
 function openFormEdit(popup) {
   inputName.value = nameUser.textContent;
   inputAbout.value = aboutUser.textContent;
   openPopup(popup);
-}
+};
 
 function openPopupAddForm() {
   openPopup(popupAddForm);
-}
+};
 
 function formAddHandler (evt) {
   evt.preventDefault();
@@ -143,14 +143,14 @@ function formAddHandler (evt) {
   elements.prepend(card);
   evt.target.reset();
   closePopup(popupAddForm);
-}
+};
 
 function formSubmitHandler (evt) {
   evt.preventDefault();
   nameUser.textContent = inputName.value;
   aboutUser.textContent = inputAbout.value;
   closePopup(popupContainer);
-}
+};
 
 // Прикрепляем обработчик к форме:
 formEdit.addEventListener('submit', formSubmitHandler);
