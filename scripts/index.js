@@ -1,11 +1,7 @@
-//открытие и закрытие формы редактирования профиля
-
 const editButton = document.querySelector('.profile__edit-btn');
 const popup = document.querySelector('.popup');
 const popupCloseButton = document.querySelectorAll('.popup__close-btn');
 
-
-// Находим форму в DOM
 const popupContainer = document.querySelector('.popup_type_edit-form');
 const popupAddForm = document.querySelector('.popup_type_add-form');
 const popupPhotoOpen = document.querySelector('.popup_type_photo-open');
