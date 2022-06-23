@@ -85,11 +85,11 @@ popupCloseButtonList.addEventListener('click', closePopup);*/
 });*/
 
 function createCard(item) {
-    const cards = cardsTemplate.querySelector('.cards').cloneNode(true);
-    const btnLike = cards.querySelector('.cards__btn-like');
-    const btnDelete = cards.querySelector('.cards__delete-btn');
-    const cardsPhoto = cards.querySelector('.cards__photo');
-    const cardsCaption = cards.querySelector('.cards__caption');
+    const newCard = cardsTemplate.querySelector('.cards').cloneNode(true);
+    const btnLike = newCard.querySelector('.cards__btn-like');
+    const btnDelete = newCard.querySelector('.cards__delete-btn');
+    const cardsPhoto = newCard.querySelector('.cards__photo');
+    const cardsCaption = newCard.querySelector('.cards__caption');
     cardsPhoto.alt = item.name;
     cardsPhoto.src = item.link;
     cardsCaption.textContent = item.name;
@@ -97,10 +97,10 @@ function createCard(item) {
       btnLike.classList.toggle('cards__btn-like_active');
     });
     btnDelete.addEventListener('click', () => {
-      cards.remove();
+      newCard.remove();
     });
     cardsPhoto.addEventListener('click', () => openCard(item));
-    return cards;
+    return newCard;
   };
 
   function openCard(item) {
