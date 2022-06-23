@@ -88,18 +88,18 @@ function createCard(item) {
     const newCard = cardsTemplate.querySelector('.cards').cloneNode(true);
     const btnLike = newCard.querySelector('.cards__btn-like');
     const btnDelete = newCard.querySelector('.cards__delete-btn');
-    const cardsPhoto = newCard.querySelector('.cards__photo');
-    const cardsCaption = newCard.querySelector('.cards__caption');
-    cardsPhoto.alt = item.name;
-    cardsPhoto.src = item.link;
-    cardsCaption.textContent = item.name;
+    const newCardPhoto = newCard.querySelector('.cards__photo');
+    const newCardCaption = newCard.querySelector('.cards__caption');
+    newCardPhoto.alt = item.name;
+    newCardPhoto.src = item.link;
+    newCardCaption.textContent = item.name;
     btnLike.addEventListener('click', () => {
       btnLike.classList.toggle('cards__btn-like_active');
     });
     btnDelete.addEventListener('click', () => {
       newCard.remove();
     });
-    cardsPhoto.addEventListener('click', () => openCard(item));
+    newCardPhoto.addEventListener('click', () => openCard(item));
     return newCard;
   };
 
