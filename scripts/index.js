@@ -136,7 +136,7 @@ function openPopupAddForm() {
 function formAddHandler (evt) {
   evt.preventDefault();
   const item ={
-    place: placeNameinput.value,
+    name: placeNameinput.value,
     link: linkInput.value
   };
   const card = createCard(item);
