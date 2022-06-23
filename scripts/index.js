@@ -10,13 +10,13 @@ const popupPhotoOpen = document.querySelector('.popup_type_photo-open');
 const formEdit = document.querySelector('.popup__form_type_edit');
 const formAdd = document.querySelector('.popup__form_type_add');
 
-const inputName = document.querySelector('.popup__input_type_name');
-const inputAbout = document.querySelector('.popup__input_type_about');
+const nameInput = document.querySelector('.popup__input_type_name');
+const aboutInput = document.querySelector('.popup__input_type_about');
 const nameUser = document.querySelector('.profile__name');
 const aboutUser = document.querySelector('.profile__about-user');
 
-const inputPlaceName = document.querySelector('.popup__input_type_place-name');
-const inputLink = document.querySelector('.popup__input_type_link');
+const placeNameinput = document.querySelector('.popup__input_type_place-name');
+const linkInput = document.querySelector('.popup__input_type_link');
 const buttonAdd = document.querySelector('.profile__add-btn');
 const popupFormAdd = document.querySelector('.popup__form_type_add');
 
@@ -66,8 +66,8 @@ const initialCards = [
 /*function openPopup() {
   popup.classList.add('popup_opened');*/
     /*document.addEventListener('keypress', closePopupOnQ);*/
-    /*inputName.value = nameUser.textContent;
-    inputAbout.value = aboutUser.textContent;
+    /*nameInput.value = nameUser.textContent;
+    aboutInput.value = aboutUser.textContent;
 }
 
 function closePopup() {
@@ -124,8 +124,8 @@ function closePopup(popup) {
 };
 
 function openFormEdit(popup) {
-  inputName.value = nameUser.textContent;
-  inputAbout.value = aboutUser.textContent;
+  nameInput.value = nameUser.textContent;
+  aboutInput.value = aboutUser.textContent;
   openPopup(popup);
 };
 
@@ -136,8 +136,8 @@ function openPopupAddForm() {
 function formAddHandler (evt) {
   evt.preventDefault();
   const item ={
-    place: inputPlaceName.value,
-    link: inputLink.value
+    place: placeNameinput.value,
+    link: linkInput.value
   };
   const card = createCard(item);
   cardsContainer.prepend(card);
@@ -147,8 +147,8 @@ function formAddHandler (evt) {
 
 function formSubmitHandler (evt) {
   evt.preventDefault();
-  nameUser.textContent = inputName.value;
-  aboutUser.textContent = inputAbout.value;
+  nameUser.textContent = nameInput.value;
+  aboutUser.textContent = aboutInput.value;
   closePopup(popupEditForm);
 };
 
