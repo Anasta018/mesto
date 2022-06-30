@@ -54,29 +54,6 @@ const initialCards = [
     }
   ];
 
-//открытие и закрытие формы редактирования профиля
-
-/*function openPopup() {
-  popup.classList.add('popup_opened');*/
-    /*document.addEventListener('keypress', closePopupOnQ);*/
-    /*nameInput.value = nameUser.textContent;
-    aboutInput.value = aboutUser.textContent;
-}
-
-function closePopup() {
-  popup.classList.remove('popup_opened');*/
-    /*document.removeEventListener('keypress', closePopupOnQ);*/
-/*}
-
-buttonEdit.addEventListener('click', openPopup);
-popupCloseButtonList.addEventListener('click', closePopup);*/
-
-/*popup.addEventListener('click', function(e) {
-    if (e.target === e.currentTarget) {
-        closePopup();
-    }
-});*/
-
 function createCard(item) {
     const newCard = cardsTemplate.querySelector('.cards').cloneNode(true);
     const btnLike = newCard.querySelector('.cards__btn-like');
