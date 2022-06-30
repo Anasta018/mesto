@@ -38,3 +38,66 @@ const isValid = (formElement, inputElement, formsConfig) => {
       hideInputError(formElement, inputElement, formsConfig);
     }
   };
+
+// Функция принимает массив полей
+
+const hasInvalidInput = (inputList) => {
+    // проходим по этому массиву методом some
+    return inputList.some((inputElement) => {
+      // Если поле не валидно, колбэк вернёт true
+      // Обход массива прекратится и вся функция
+      // hasInvalidInput вернёт true
+  
+      return !inputElement.validity.valid;
+    })
+  };
+
+const toggleButtonState = (inputList, buttonSubmit) => {
+    // Если есть хотя бы один невалидный инпут
+    if (hasInvalidInput(inputList)) {
+      // сделай кнопку неактивной
+      buttonSubmit.setAttribute('disabled', '');
+    } else {
+      // иначе сделай кнопку активной
+      buttonSubmit.removeAttribute('disabled', true);
+    }
+  };
+
+  const setEventListeners = (formElement, formsConfig) => {
+    // Находим все поля внутри формы,
+    // сделаем из них массив методом Array.from
+    const inputList = Array.from(formElement.querySelectorAll(formsConfig.inputSelector));
+    const buttonSubmit = formElement.querySelectorAll(formsConfig.submitButtonSelector);
+  
+    // Обойдём все элементы полученной коллекции
+    inputList.forEach((inputElement) => {
+      // каждому полю добавим обработчик события input
+      inputElement.addEventListener('input', () => {
+        // Внутри колбэка вызовем isValid,
+        // передав ей форму и проверяемый элемент
+        isValid(formElement, inputElement, formsConfig);
+        toggleButtonState(inputList, buttonSubmit);
+      });
+    });
+  };
+
+  const enableValidation = (formsConfig) => {
+    // Найдём все формы с указанным классом в DOM,
+    // сделаем из них массив методом Array.from
+    const formList = Array.from(document.querySelectorAll(formsConfig.formSelector));
+  
+    // Переберём полученную коллекцию
+    formList.forEach((formElement) => {
+      formElement.addEventListener('submit', (evt) => {
+        // У каждой формы отменим стандартное поведение
+        evt.preventDefault();
+      });
+  
+      // Для каждой формы вызовем функцию setEventListeners,
+      // передав ей элемент формы
+      setEventListeners(formElement, formsConfig);
+    });
+  };
+  
+  // Вызовем функцию
+  enableValidation(formsConfig);
