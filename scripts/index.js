@@ -55,12 +55,7 @@ const initialCards = [
   ];
 
 //открытие и закрытие формы редактирования профиля
-//закрытие клавишей Q
-/*function closePopupOnQ(e) {
-    if (e.code === 'KeyQ') {
-        closePopup();
-    }
-}*/
+
 
 /*function openPopup() {
   popup.classList.add('popup_opened');*/
@@ -116,10 +111,19 @@ function createCard(item) {
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closePopupOnEsc);
 };
 
+//закрытие клавишей Esc
+function closePopupOnEsc(evt) {
+  if (evt.key === 'Escape') {
+      const popupOpened = document.querySelector('.popup_opened');
+      close(popupOpened);
+  }
+}
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closePopupOnEsc);
 };
 
 function openFormEdit(popup) {
