@@ -1,5 +1,5 @@
 const buttonEdit = document.querySelector('.profile__edit-btn');
-const popupCloseButtonList = document.querySelectorAll('.popup__close-btn');
+const popupCloseButtonList = document.querySelectorAll('.popup');
 
 const popupEditForm = document.querySelector('.popup_type_edit-form');
 const popupAddForm = document.querySelector('.popup_type_add-form');
@@ -56,7 +56,6 @@ const initialCards = [
 
 //открытие и закрытие формы редактирования профиля
 
-
 /*function openPopup() {
   popup.classList.add('popup_opened');*/
     /*document.addEventListener('keypress', closePopupOnQ);*/
@@ -109,18 +108,20 @@ function createCard(item) {
       cardsContainer.prepend(rCards);
   });
 
+//Ф-я закрытия клавишей Esc
+function closePopupOnEsc(evt) {
+  if (evt.key === 'Escape') {
+      const popupOpened = document.querySelector('.popup_opened');
+      closePopup(popupOpened);
+  }
+}
+
 function openPopup(popup) {
   popup.classList.add('popup_opened');
   document.addEventListener('keydown', closePopupOnEsc);
 };
 
-//закрытие клавишей Esc
-function closePopupOnEsc(evt) {
-  if (evt.key === 'Escape') {
-      const popupOpened = document.querySelector('.popup_opened');
-      close(popupOpened);
-  }
-}
+
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closePopupOnEsc);
@@ -167,10 +168,13 @@ buttonAdd.addEventListener('click', function() {
   openPopup(popupAddForm);
 });
 
-popupCloseButtonList.forEach(function(item) {
-  item.addEventListener('click', function(evt) {        
-      const popupClose = evt.target.closest('.popup');
-      closePopup(popupClose);
+popupCloseButtonList.forEach((item) => {
+  item.addEventListener('mousedown', (evt) => {        
+      const popupClose = evt.target.classList;
+      if ((popupClose.contains('popup_opened')) || 
+      (popupClose.contains('popup__close-btn'))) {
+        closePopup(item);
+      }
   });
 });
 
