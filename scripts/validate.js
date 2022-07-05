@@ -1,17 +1,15 @@
 const formsConfig ={
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
-    submitButtonSelector: '.popup__button',
-    inactiveButtonClass: 'popup__button_disabled',
+    submitButtonSelector: '.popup__btn-save',
+    inactiveButtonClass: 'popup__btn-save_disabled',
     inputErrorClass: 'popup__input_type_error',
     errorClass: 'popup__error_visible'
   };
 
-  /*enableValidation(formsConfig);*/
-
   const showInputError = (formElement, inputElement, formsConfig) => {
     // Находим элемент ошибки внутри самой функции
-    const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
+    const errorElement = formElement.querySelector(`.${inputElement.name}-error`);
     // Остальной код такой же
     inputElement.classList.add(formsConfig.inputErrorClass);
     errorElement.textContent = inputElement.validationMessage;

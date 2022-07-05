@@ -1,0 +1,25 @@
+.popup__error {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: block;
+    min-height: 30px;
+    visibility: hidden;
+    width: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+}
+
+@media screen and (max-width: 1023px) {
+    .popup__error {
+        width: 82%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .popup__btn-save {
+        width: 238px;
+    }
+}
