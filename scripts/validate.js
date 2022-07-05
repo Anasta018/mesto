@@ -9,7 +9,7 @@ const formsConfig ={
 
   const showInputError = (formElement, inputElement, formsConfig) => {
     // Находим элемент ошибки внутри самой функции
-    const errorElement = formElement.querySelector(`.${inputElement.name}-error`);
+    const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
     // Остальной код такой же
     inputElement.classList.add(formsConfig.inputErrorClass);
     errorElement.textContent = inputElement.validationMessage;
